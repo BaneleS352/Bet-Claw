@@ -1,0 +1,26 @@
+{
+  "name": "@openclaw/web",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json && vite build",
+    "dev": "vite --host 127.0.0.1",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "test": "vitest run src --passWithNoTests && playwright test",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "@openclaw/shared": "workspace:*",
+    "@vitejs/plugin-react": "^4.5.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "vite": "^6.3.5"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/react": "^19.1.5",
+    "@types/react-dom": "^19.1.5"
+  }
+}

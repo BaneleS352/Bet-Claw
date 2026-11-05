@@ -1,0 +1,26 @@
+{
+  "server": {
+    "host": "127.0.0.1",
+    "port": 3001
+  },
+  "llm": {
+    "provider": "openai-compatible",
+    "baseUrl": "http://127.0.0.1:11434/v1",
+    "apiKey": "local-development-key",
+    "chatModel": "local-chat"
+  },
+  "network": {
+    "mode": "offline",
+    "allowLoopback": true,
+    "allowedHosts": ["127.0.0.1", "localhost"]
+  },
+  "workspace": {
+    "root": "."
+  },
+  "agentOs": {
+    "enabled": true,
+    "heartbeatIntervalMs": 30000,
+    "jobsPerHeartbeat": 5,
+    "jobRetryDelayMs": 60000
+  }
+}

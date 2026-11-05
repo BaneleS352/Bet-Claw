@@ -1,0 +1,26 @@
+{
+  "name": "openclaw-foundation",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@10.11.0",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "dev": "corepack pnpm --parallel --filter @openclaw/api --filter @openclaw/web dev",
+    "build": "corepack pnpm -r --if-present build",
+    "test": "corepack pnpm -r --if-present test",
+    "lint": "corepack pnpm -r --if-present lint",
+    "db:migrate": "corepack pnpm --filter @openclaw/db db:migrate",
+    "agent-os:demo": "tsx --conditions development examples/agent-os-demo.ts"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.27.0",
+    "@types/node": "^24.0.0",
+    "eslint": "^9.27.0",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.32.1",
+    "vitest": "^3.1.4"
+  }
+}

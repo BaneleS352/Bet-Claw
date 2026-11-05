@@ -1,0 +1,27 @@
+{
+  "name": "@openclaw/api",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "dev": "tsx watch --conditions development src/index.ts",
+    "lint": "eslint .",
+    "start": "node dist/index.js",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@fastify/cors": "^11.0.1",
+    "@openclaw/agent-os": "workspace:*",
+    "@openclaw/capabilities": "workspace:*",
+    "@openclaw/config": "workspace:*",
+    "@openclaw/db": "workspace:*",
+    "@openclaw/llm": "workspace:*",
+    "@openclaw/memory": "workspace:*",
+    "@openclaw/shared": "workspace:*",
+    "ajv": "^8.20.0",
+    "fastify": "^5.3.3"
+  }
+}
